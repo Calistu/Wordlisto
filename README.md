@@ -6,7 +6,7 @@ The tool receive some informations about the password owner, and with it can be 
 </p>
 <p>
 Program written in C language</br>
-Install with "sudo install.sh"</br>
+Install with "sudo sh install.sh"</br>
 Portable for Linux and Windows</br>
 </p>
 <p>
