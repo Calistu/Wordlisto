@@ -7,10 +7,10 @@ echo "\n\e[93minstalling\e[0m...\n"
 gcc wordlisto.c -o /bin/wordlisto
 chmod +x /bin/wordlisto
 cp -f /bin/wordlisto /usr/local/bin/
-chmod +x /usr/local/wordlisto
+chmod +x /usr/local/bin/wordlisto
 cp -f man/wordlisto.1 /usr/share/man/man1/
 gzip -q -f /usr/share/man/man1/wordlisto.1
-chmod +x /usr/share/man/man1/wordlisto.1
+chmod +x /usr/share/man/man1/wordlisto.1.gz
 mkdir /usr/share/wordlisto
 cp -f -r DB /usr/share/wordlisto
 chmod +x /usr/share/wordlisto
