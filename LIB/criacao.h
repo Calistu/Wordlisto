@@ -3,6 +3,12 @@ void criar()
     int a,b,ano,len;
     FILE *wordlist;
     wordlist = fopen(caminho,WR);
+    if(wordlist == NULL)
+    {
+			printf("\nCan't open a file, see the path that you want create\n");
+			printf("Did you used sudo?\n");
+			exit(1);
+	}
     for(a=0;a<=16;a++)
     {
         for(b=16;b>=0;b--)
