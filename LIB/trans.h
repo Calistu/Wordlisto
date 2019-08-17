@@ -65,8 +65,16 @@ char* capital(char *word)
 		if(word[0]==minuscula)
 		{
 			word[0] = maiuscula;
+			return word;
+		}
+		else
+		if(word[0]==maiuscula)
+		{
+			word[0] = minuscula;
+			return word;
 		}
 		maiuscula++;
 	}
+	word = "erro";
 	return word;
 }

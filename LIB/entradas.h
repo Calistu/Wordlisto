@@ -1,6 +1,6 @@
 char entradas()
 {
-    int ascii, a = 0, b = 0;
+    int a = 0, b = 0;
     a = 0;
     system("cls||clear");
     printf("\nTYPE THE OWNER PASSWORD FIRST NAME: ");
