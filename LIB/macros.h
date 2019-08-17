@@ -1,6 +1,6 @@
 #define RD "r"
 #define AP "a+"
-#define WR "a+" // use "w" if want to replace the wordlist with the same name.
+#define WR "w" // replace with "a+" if want to imcrement wordlists with the same name.
 struct custom_wordl
 {
 	int id;

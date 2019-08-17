@@ -6,7 +6,7 @@ void criar()
     if(wordlist == NULL)
     {
 			printf("\nCan't open a file, see the path that you want create\n");
-			printf("Did you used sudo?\n");
+			printf("I cant crete nothing here, plese use other folder to create it\n");
 			exit(1);
 	}
     for(a=0;a<=16;a++)
@@ -95,6 +95,6 @@ void criar()
     }
     fclose(wordlist);
     custommer();
-    printf("\nO arquivo: %s\n",caminho);            
+    printf("\nThe File: %s\n",caminho);            
 	exit(0);
 }
