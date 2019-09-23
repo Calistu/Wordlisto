@@ -13,13 +13,13 @@ Portable for Linux and Windows</br>
 <h2> #The usage</h2> </br>
 The arguments refer to the type of matter that should be combined with user input. </br>
 ./wordlisto [-s -c -m -t -w -a -l || --custom <path> --help] </br>
--s simple<br>
--c common<br>
--m music<br>
--t tech<br>
--w show<br>
--a anime<br>
--l all previous
+[-s] simple<br>
+[-c] common<br>
+[-m] music<br>
+[-t] tech<br>
+[-w] show<br>
+[-a] anime<br>
+[-l] all previous
 <br>
 --custom: use a custom wordlist (should be used --custom "path")</br>
 --help: usage screen.
