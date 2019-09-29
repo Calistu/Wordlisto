@@ -75,6 +75,6 @@ char* capital(char *word)
 		}
 		maiuscula++;
 	}
-	word = "erro";
+	//word = "error";
 	return word;
 }
