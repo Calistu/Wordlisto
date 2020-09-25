@@ -6,7 +6,7 @@ void banner()
 		printf("\n");
 		printf("                                ==================\n");
 		printf("                                ||  Wordlisto   ||\n");
-		printf("                                ||  by Calistu  ||\n");
+		printf("                                ||  por Calistu ||\n");
 		printf("                                ||  ~~~~        ||\n");
 		printf("                                ||  ~~          ||\n");
 		printf("                                ||  ~~~         ||\n");
@@ -19,8 +19,8 @@ void init()
 {
 	system("cls||clear");
 	banner();
-    printf("\n                      INPUT THE FIELDS ACCORDING THE OUTPUTS\n");
-    printf("                           PRESS ENTER KEY TO CONTINUE...");
+    printf("\n                      Preencha os campos de acordo com os enunciados\n");
+    printf("                           Pressione enter para continuar...");
     getchar();
 
 }

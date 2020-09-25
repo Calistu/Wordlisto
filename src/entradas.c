@@ -9,34 +9,35 @@ char entradas()
     int a = 0, b = 0;
     a = 0;
     system("cls||clear");
-    printf("\nTYPE THE OWNER PASSWORD FIRST NAME: ");
+    printf("\nDados referentes ao proprietário da senha: \n");
+    printf("\nPrimeiro nome do proprietário: ");
     fgets(nome, 20, stdin);
     limpacr(nome);
-    printf("\nTYPE THE OWNER PASSWORD SURNAME: ");
+    printf("\nSobrenome do proprietário: ");
     fgets(sobrenome, 20, stdin);
     limpacr(sobrenome);
-    printf("\nTYPE THE OWNER PASSWORD PARTNERS NAME: ");
+    printf("\nPrimeiro nome da Garota(o) com relação amorosa: ");
     fgets(crush, 20, stdin);
     limpacr(crush);
-    printf("\nTYPE THE OWNER PASSWORD PARTNERS SURNAME: ");
+    printf("\nSobrenome da Garota(o) com relação amorosa: ");
     fgets(sobrenomecrush, 20, stdin);
     limpacr(sobrenomecrush);
-    printf("\nTYPE THE OWNER PASSWORD PET NAME: ");
+    printf("\nNome do pet/animal do proprietário: ");
     fgets(pet, 20, stdin);
     limpacr(pet);
-    printf("\nTYPE A OWNER PASSWORD PHONE NUMBER\nRECOMMEND THIS DEFAULT XXXXXXXX\n(without IDs or especial numbers): ");
+    printf("\nDigite um numero de telefone do proprietário\nNo padrão XXXXXXXX\n(sem IDs ou numeros especiais): ");
     fgets(numero, 12, stdin);
     limpacr(numero);
     sprintf(pparte, "%c%c%c", numero[0], numero[1], numero[2],numero[3]);
     sprintf(sparte, "%c%c%c%c", numero[4], numero[5], numero[6],numero[7]);
     sprintf(nnumero, "9%s", numero);
-    printf("\nTYPE A OWNER PASSWORD OLD PHONE\nRECOMMEND THIS DEFAULT XXXXXXXX\n(without IDs or especial numbers): ");
+    printf("\nDigite outro numero de telefone do proprietário\nNo padrão XXXXXXXX\n(sem IDs ou numeros especiais): ");
     fgets(numero2, 12, stdin);
     limpacr(numero2);
     sprintf(pparte2, "%c%c%c%c", numero2[0], numero2[1], numero2[2], numero[3]);
     sprintf(sparte2, "%c%c%c%c", numero2[4], numero2[5], numero2[6],numero[7]);
     sprintf(nnumero2, "9%s", numero2);
-    printf("\nTYPE THE OWNER PASSWORD BITH DAY\nSHOULD BE IN THIS DATE FORMAT XX-XX-XXXX: ");
+    printf("\nDigite a data de nascimento do proprietário\nDeve seguir o padrão XX-XX-XXXX: ");
     fgets(data, 12, stdin);
     limpacr(data);
     b = strlen(data);
@@ -69,8 +70,8 @@ char entradas()
         }
     }
 
-    printf("\nTYPE THE WORDLIST CREATION PATH EX: /home/user/Desktop/wordlist.txt\nIF THE PATH IS HERE, TYPE ONLY THE NAME: ");
-    fgets(caminho,20,stdin);
-    printf("Solicited File: %s\n",caminho);
+    printf("\nDigite o caminho para a criacao da wordlist EX: /home/user/Desktop/wordlist.txt\n: ");
+    fgets(caminho,19,stdin);
+    printf("Arquivo solicitado: %s",caminho);
     return 0;
 }

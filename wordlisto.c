@@ -3,15 +3,25 @@
 #include <locale.h>
 #include <string.h>
 
-#include <load_wordlisto.h>
+#include <wordlisto.h>
 
 int main(int argc,char *argv[])
 {
     setlocale(LC_ALL,"");
-    exception(argc,&argv[0]);
+
+    if(exception(argc,argv))
+      return 1;
+
     init();
-    entradas();
-    crialist();
-    criar();
+
+    if(entradas())
+      return 1;
+
+    if(crialist())
+      return 1;
+
+    if(criar())
+      return 1;
+
     return 0;
 }

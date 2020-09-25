@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #include <custom.h>
-#include <canone.h>
-#include <trans.h>
 
 int custommer()
 {
@@ -12,21 +11,14 @@ int custommer()
 	word=malloc(sizeof(char*));
 	FILE * nw_list;
 	FILE * w_arq;
-	#ifdef linux
-	w_list[0].path = ("/usr/share/wordlisto/DB/SIMPLE");
-	w_list[1].path = ("/usr/share/wordlisto/DB/COMMON");
-	w_list[2].path = ("/usr/share/wordlisto/DB/MUSIC");
-	w_list[3].path = ("/usr/share/wordlisto/DB/TECH");
-	w_list[4].path = ("/usr/share/wordlisto/DB/SHOWS");
-	w_list[5].path = ("/usr/share/wordlisto/DB/ANIME");
-	#elif defined (_WIN32) || defined (WIN32)
-	w_list[0].path = ("DB/SIMPLE");
-	w_list[1].path = ("DB/COMMON");
-	w_list[2].path = ("DB/MUSIC");
-	w_list[3].path = ("DB/TECH");
-	w_list[4].path = ("DB/SHOWS");
-	w_list[5].path = ("DB/ANIME");
-	#endif
+
+	w_list[0].path = ("db/SIMPLE");
+	w_list[1].path = ("db/COMMON");
+	w_list[2].path = ("db/MUSIC");
+	w_list[3].path = ("db/TECH");
+	w_list[4].path = ("db/SHOWS");
+	w_list[5].path = ("db/ANIME");
+
 	for(int cont=0;cont<=6;cont++)
 	{
 		if(w_list[cont].id==1)
@@ -36,15 +28,16 @@ int custommer()
 				w_arq = fopen(w_list[cont].path,RD);
 				if(w_arq==NULL)
 				{
-					printf("\nError openin the custom wordlist\n");
-					exit(1);
+					printf("\nErro abrindo o arquivo de lista personalizada\n");
+					printf("%s",strerror(errno));
+					return 1;
 				}
 			}
 			nw_list = fopen(caminho,AP);
 			if(nw_list==NULL)
 			{
-				printf("\nError reopenin the main wordlist\n");
-				exit(1);
+				printf("\nErro abrindo wordlist principal\n");
+				return 1;
 			}
 			memset(word,0,strlen(word));
 			while((ascii = fgetc(w_arq))!=EOF)

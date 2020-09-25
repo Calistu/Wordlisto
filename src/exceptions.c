@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <args.h>
-#include <canone.h>
+#include <exceptions.h>
 
 int exception(int argc,char *argv[])
 {
@@ -13,6 +12,7 @@ int exception(int argc,char *argv[])
 	if(argc<2)
 	{
 		ini();
+		return 1;
 	}
 	else
 	{
@@ -51,12 +51,18 @@ int exception(int argc,char *argv[])
 						if(strcmp(argv[cont],"--help")==0)
 						{
 							help();
+							return 1;
 						}
 						else
 						if(strcmp(argv[cont],"--custom")==0)
 						{
 							w_list[6].id=1;
-							w_list[6].path = argv[cont+1];
+							if(argv[cont+1])
+								w_list[6].path = strdup(argv[cont+1]);
+							else{
+								err(&argv[0],cont);
+								return 1;
+							}
 							FILE*test;
 							test=fopen(w_list[6].path,RD);
 							if(test==NULL)
@@ -68,16 +74,19 @@ int exception(int argc,char *argv[])
 						else
 						{
 							err(&argv[0],cont);
+							return 1;
 						}
 						break;
 					default:
 						err(&argv[0],cont);
+						return 1;
 						break;
 				}
 			}
 			else
 			{
 				err(&argv[0],cont);
+				return 1;
 			}
 		}
 	}

@@ -17,19 +17,11 @@ char nnumero2[20];
 char pparte2[20];
 char sparte2[20];
 char data[20];
-char  caminho[20];
+char caminho[20];
 char *list[17];
 int posicao;
 
-#define CASE 1
-#define BINAR "wb"
-#define TXT "w"
-
-#define RD "r"
-#define AP "a+"
-#define WR "w" // replace with "a+" if want to imcrement wordlists with the same name.
-
-static struct custom_wordl
+struct custom_wordl
 {
 	int id;
 	char *path;
