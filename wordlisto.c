@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include "LIB/macros.h"
+
+#include <load_wordlisto.h>
+
 int main(int argc,char *argv[])
 {
     setlocale(LC_ALL,"");

@@ -1,3 +1,5 @@
+#include <trans.h>
+
 char insp(char ascii,int opc)
 {
     int minuscula,maiuscula = 65;
@@ -16,7 +18,7 @@ char insp(char ascii,int opc)
         case 2:
             if(ascii==97)
             {
-                ascii = 52;  
+                ascii = 52;
             }
             break;
         case 3:

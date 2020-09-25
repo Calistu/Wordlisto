@@ -1,9 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+#include <args.h>
+
 void ini()
 {
 	banner();
 	printf("\n                                ./wordlisto --help\n");
-	exit(1);
+	return ;
 }
+
 int err(char**argv,int pos)
 {
 	if(strcmp(argv[pos-1],"--custom")!=0)
@@ -15,6 +20,7 @@ int err(char**argv,int pos)
 	else
 	return 0;
 }
+
 void help()
 {
 	printf("\n================== WORDLISTO beta - (C) 2019\n");
@@ -23,7 +29,7 @@ void help()
 	printf("||              ||\n");
 	printf("||  ~~~~~~      || Usage: ./wordlisto \n");
 	printf("||  ~~          || [-s -c -m -t -w -a || --custom <path> --help]\n");
-	printf("||  ~~~~        ||\n"); 
+	printf("||  ~~~~        ||\n");
 	printf("||  ~~~~        ||\n");
 	printf("==================\nArgumments Options:\n");
 	printf("-s <simple>: without a integration's wordlist\n");
@@ -35,5 +41,5 @@ void help()
 	printf("-l <all>: include all the previous arguments\n\n");
 	printf("--custom: use a self wordlist\n");
 	printf("--help: display this usage screen\n");
-	exit(1);
+	return ;
 }

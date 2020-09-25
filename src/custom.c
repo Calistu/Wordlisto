@@ -1,3 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <custom.h>
+#include <canone.h>
+#include <trans.h>
+
 int custommer()
 {
 	int ascii,num=0;
@@ -11,14 +18,14 @@ int custommer()
 	w_list[2].path = ("/usr/share/wordlisto/DB/MUSIC");
 	w_list[3].path = ("/usr/share/wordlisto/DB/TECH");
 	w_list[4].path = ("/usr/share/wordlisto/DB/SHOWS");
-	w_list[5].path = ("/usr/share/wordlisto/DB/ANIME");	
+	w_list[5].path = ("/usr/share/wordlisto/DB/ANIME");
 	#elif defined (_WIN32) || defined (WIN32)
 	w_list[0].path = ("DB/SIMPLE");
 	w_list[1].path = ("DB/COMMON");
 	w_list[2].path = ("DB/MUSIC");
 	w_list[3].path = ("DB/TECH");
 	w_list[4].path = ("DB/SHOWS");
-	w_list[5].path = ("DB/ANIME");	
+	w_list[5].path = ("DB/ANIME");
 	#endif
 	for(int cont=0;cont<=6;cont++)
 	{
@@ -50,12 +57,12 @@ int custommer()
 				else
 				{
 					for(int cont1=0;cont1<=16;cont1++)
-					{	
+					{
 						fprintf(nw_list,"%s%s\n",word,list[cont1]);
 						fprintf(nw_list,"%s%s\n",list[cont1],word);
 						if(cont1<5)
 						{
-							//create words with capital 
+							//create words with capital
 							fprintf(nw_list,"%s%s\n",capital(word),list[cont1]);
 							capital(word);
 							fprintf(nw_list,"%s%s\n",word,capital(list[cont1]));
@@ -72,7 +79,7 @@ int custommer()
 						else
 						{
 							fprintf(nw_list,"%s%s\n",word,list[cont1]);
-							fprintf(nw_list,"%s%s\n",list[cont1],word);	
+							fprintf(nw_list,"%s%s\n",list[cont1],word);
 							fprintf(nw_list,"%s%s\n",capital(word),list[cont1]);
 							capital(word);
 							fprintf(nw_list,"%s%s\n",list[cont1],capital(word));

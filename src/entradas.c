@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <entradas.h>
+#include <limpacr.h>
+
 char entradas()
 {
     int a = 0, b = 0;
@@ -64,6 +70,7 @@ char entradas()
     }
 
     printf("\nTYPE THE WORDLIST CREATION PATH EX: /home/user/Desktop/wordlist.txt\nIF THE PATH IS HERE, TYPE ONLY THE NAME: ");
-    scanf("%s", caminho);
+    fgets(caminho,20,stdin);
+    printf("Solicited File: %s\n",caminho);
     return 0;
 }

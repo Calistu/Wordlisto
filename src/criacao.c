@@ -1,3 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <args.h>
+#include <trans.h>
+#include <criacao.h>
+#include <custom.h>
+#include <canone.h>
+
 void criar()
 {
     int a,b,ano,len;
@@ -6,8 +15,8 @@ void criar()
     if(wordlist == NULL)
     {
 			printf("\nCan't open a file, see the path that you want create\n");
-			printf("I cant crete nothing here, plese use other folder to create it\n");
-			exit(1);
+			printf("I cant crete nothing here, plese use other folder to create it\n:'%s'\n",caminho);
+			return ;
 	}
     for(a=0;a<=16;a++)
     {
@@ -64,7 +73,7 @@ void criar()
 			{
 				 fprintf(wordlist,"%c",insp(list[a][cont],CASE));
 			}
-			fprintf(wordlist,"%c",simb);	
+			fprintf(wordlist,"%c",simb);
 			len = strlen(list[b]);
 			for(int cont=0;cont<len;cont++)
 			{
@@ -95,6 +104,6 @@ void criar()
     }
     fclose(wordlist);
     custommer();
-    printf("\nThe File: %s\n",caminho);            
+    printf("\nCreated on the File: %s\n",caminho);
 	exit(0);
 }

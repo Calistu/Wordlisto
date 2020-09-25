@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #define COR_PADRAO 999
 void banner()
 {
@@ -20,5 +22,5 @@ void init()
     printf("\n                      INPUT THE FIELDS ACCORDING THE OUTPUTS\n");
     printf("                           PRESS ENTER KEY TO CONTINUE...");
     getchar();
-    
+
 }

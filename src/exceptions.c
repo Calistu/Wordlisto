@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include <args.h>
+#include <canone.h>
+
 int exception(int argc,char *argv[])
 {
 	int cont;
@@ -57,7 +62,7 @@ int exception(int argc,char *argv[])
 							if(test==NULL)
 							{
 								printf("\n   --custom: can't open the custom wordlist\n\n");
-								exit(1);
+								return 1;
 							}
 						}
 						else

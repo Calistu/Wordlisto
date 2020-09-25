@@ -1,3 +1,4 @@
+#include <string.h>
 int limpacr(char *buffer)
 {
 	int a=0,ascii=0;
