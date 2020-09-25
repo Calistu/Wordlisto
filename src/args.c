@@ -24,22 +24,27 @@ int err(char**argv,int pos)
 void help()
 {
 	printf("\n================== WORDLISTO beta - (C) 2019\n");
-	printf("||  Wordlisto   || Helper Screen:\n");
-	printf("||  by Calistu  ||\n");
+	printf("||  Wordlisto   || Tela de Ajuda:\n");
+	printf("||  por Calistu ||\n");
 	printf("||              ||\n");
-	printf("||  ~~~~~~      || Usage: ./wordlisto \n");
+	printf("||  ~~~~~~      || Uso: ./wordlisto \n");
 	printf("||  ~~          || [-s -c -m -t -w -a || --custom <path> --help]\n");
+	printf("||  ~~~~        || Gerador de wordlists com base em wordlists simples e personalizadas\n");
 	printf("||  ~~~~        ||\n");
-	printf("||  ~~~~        ||\n");
-	printf("==================\nArgumments Options:\n");
-	printf("-s <simple>: without a integration's wordlist\n");
-	printf("-c <common>: common words wordlist integrate with the inputs\n");
-	printf("-m <music>: integration with music\n");
-	printf("-t <tech>: integration with tech affair\n");
-	printf("-w <shows>: intergration with movies and tv shows\n");
-	printf("-a <anime>: integration using words in animes and cartoons\n");
-	printf("-l <all>: include all the previous arguments\n\n");
-	printf("--custom: use a self wordlist\n");
-	printf("--help: display this usage screen\n");
+	printf("==================\n");
+	printf("\n");
+	printf("==================\nOpções de Argummentos:\n");
+	printf("-s <simple>: Sem integração com listas externas\n");
+	printf("-c <common>: Lista de palavras comuns integradas com as entradas\n");
+	printf("-m <music>: Integração com palavras no mundo da música\n");
+	printf("-t <tech>: Integração com questões de tecnologia\n");
+	printf("-w <shows>: Integração com filmes e programas de tv\n");
+	printf("-a <anime>: Integração usando palavras em animes e desenhos animados\n");
+	printf("-l <all>: Inclui todos os argumentos anteriores\n\n");
+	printf("--custom: Use uma lista de palavras próprias\n");
+	printf("--help: Exibir esta tela de ajuda\n");
+	printf("\n");
+	printf("Exemplos: ./Wordlisto -t --custom minhawordlist.txt\n");
+	printf("          ./Wordlisto -a\n");
 	return ;
 }

@@ -67,7 +67,7 @@ int exception(int argc,char *argv[])
 							test=fopen(w_list[6].path,RD);
 							if(test==NULL)
 							{
-								printf("\n   --custom: can't open the custom wordlist\n\n");
+								printf("\n   --custom: Não foi possível abrir lista personalizada\n\n");
 								return 1;
 							}
 						}
