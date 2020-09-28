@@ -1,4 +1,5 @@
-char entradas();
+int formatar_path(char *path);
+int entradas();
 
 extern char nome[20];
 
@@ -36,6 +37,6 @@ extern char data[20];
 
 extern char  caminho[20];
 
-extern char *list[17];
+extern char *list[18];
 
 extern int posicao;

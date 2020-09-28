@@ -4,14 +4,14 @@
 #include <errno.h>
 #include <custom.h>
 
-int custommer()
+int customizar()
 {
 	int ascii,num=0;
 	char *word;
-	word=malloc(sizeof(char*));
 	FILE * nw_list;
 	FILE * w_arq;
 
+	word=malloc(sizeof(char*));
 	w_list[0].path = ("db/SIMPLE");
 	w_list[1].path = ("db/COMMON");
 	w_list[2].path = ("db/MUSIC");
@@ -33,12 +33,13 @@ int custommer()
 					return 1;
 				}
 			}
+
 			nw_list = fopen(caminho,AP);
-			if(nw_list==NULL)
-			{
-				printf("\nErro abrindo wordlist principal\n");
+			if(nw_list==NULL){
+				printf("\nErro reabrindo wordlist principal\n");
 				return 1;
 			}
+
 			memset(word,0,strlen(word));
 			while((ascii = fgetc(w_arq))!=EOF)
 			{
@@ -55,7 +56,8 @@ int custommer()
 						fprintf(nw_list,"%s%s\n",list[cont1],word);
 						if(cont1<5)
 						{
-							//create words with capital
+
+							//criar palavras maiusculas
 							fprintf(nw_list,"%s%s\n",capital(word),list[cont1]);
 							capital(word);
 							fprintf(nw_list,"%s%s\n",word,capital(list[cont1]));
@@ -68,7 +70,8 @@ int custommer()
 							capital(word);
 							capital(list[cont1]);
 						}
-						//avoidin duplications cause the numbers after list[4]
+
+						//evitar duplicações com as datas e telefones (não mudam com letras maiusculas/minusculas)
 						else
 						{
 							fprintf(nw_list,"%s%s\n",word,list[cont1]);
@@ -78,7 +81,8 @@ int custommer()
 							fprintf(nw_list,"%s%s\n",list[cont1],capital(word));
 							capital(word);
 						}
-						//create words with capital and simbols
+
+						//criar palavras maiusculas com simbolos
 						for(int simb = 33;simb<=47;simb++)
 						{
 							if(cont1<5)
@@ -95,9 +99,9 @@ int custommer()
 								capital(word);
 								capital(list[cont1]);
 							}
-							//same that line 69
 							else
 							{
+								//feito para evitar duplicações com as datas e telefones (não mudam com letras maiusculas/minusculas)
 								fprintf(nw_list,"%s%c%s\n",list[cont1],simb,word);
 								fprintf(nw_list,"%s%c%s\n",word,simb,list[cont1]);
 								fprintf(nw_list,"%s%c%s\n",list[cont1],simb,capital(word));

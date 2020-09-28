@@ -15,6 +15,8 @@ int criar ()
          caminho);
         return 1;
     }
+
+    //testa as palavras em junção 1 para 1
     for (a = 0; a <= 16; a++)
     {
         for (b = 16; b >= 0; b--)
@@ -26,6 +28,8 @@ int criar ()
         }
         fprintf (wordlist, "%s\n", list[a]);
     }
+
+    //testa as palavras em junção com o telefone e celular com digito 9
     for (a = 0; a <= 16; a++)
     {
         if (a != b)
@@ -34,6 +38,8 @@ int criar ()
             fprintf (wordlist, "%s9%s\n", list[a], list[8]);
         }
     }
+
+    //cria listas com simbolos entre palavras e ano
     for (ano = 2000; ano <= 2030; ano++)
     {
         for (a = 0; a <= 16; a++)
@@ -46,6 +52,7 @@ int criar ()
             fprintf (wordlist, "%i.%s\n", ano, list[a]);
         }
     }
+
     for (a = 0; a <= 16; a++)
     {
         for (b = 16; b >= 0; b--)
@@ -101,7 +108,7 @@ int criar ()
         }
     }
     fclose (wordlist);
-    custommer ();
-    printf ("\nCreated on the File: %s\n", caminho);
+    customizar ();
+    printf ("\nCriado no Arquivo: %s\n", caminho);
     exit (0);
 }

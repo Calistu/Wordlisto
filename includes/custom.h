@@ -1,4 +1,4 @@
-int custommer();
+int customizar();
 
 #define BINAR "wb"
 #define TXT "w"
@@ -9,7 +9,7 @@ int custommer();
 
 extern char *list[17];
 
-extern char  caminho[20];
+extern char caminho[20];
 
 extern char* capital(char *word);
 

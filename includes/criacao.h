@@ -2,7 +2,7 @@ int criar ();
 
 extern char insp(char ascii,int opc);
 
-extern int custommer();
+extern int customizar();
 
 #define CASE 1
 #define BINAR "wb"

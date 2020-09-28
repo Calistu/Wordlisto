@@ -2,7 +2,7 @@ CC=gcc
 TARGET=wordlisto.c
 RESULT=WordListo
 INCLUDES=-I includes
-CC_FLAGS=$(INCLUDES) -g
+CC_FLAGS=$(INCLUDES) -g 
 OBJECTS=args.o canone.o criacao.o custom.o entradas.o exceptions.o limpacr.o prints.o trans.o
 
 all: objects.o

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include <entradas.h>
 #include <limpacr.h>
 
-char entradas()
-{
+int entradas(){
     int a = 0, b = 0;
     a = 0;
     system("cls||clear");
@@ -71,7 +71,17 @@ char entradas()
     }
 
     printf("\nDigite o caminho para a criacao da wordlist EX: /home/user/Desktop/wordlist.txt\n: ");
-    fgets(caminho,19,stdin);
-    printf("Arquivo solicitado: %s",caminho);
+    fgets(caminho,20,stdin);
+    formatar_path(caminho);
+    printf("Arquivo solicitado: %s\n",caminho);
     return 0;
+}
+
+
+int formatar_path(char *path){
+  for(int cont=0;cont<strlen(path);cont++){
+    if( !isalpha(path[cont]) ){
+      path[cont] = '_';
+    }
+  }
 }

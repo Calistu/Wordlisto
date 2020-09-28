@@ -18,7 +18,7 @@ char pparte2[20];
 char sparte2[20];
 char data[20];
 char caminho[20];
-char *list[17];
+char *list[18];
 int posicao;
 
 struct custom_wordl
